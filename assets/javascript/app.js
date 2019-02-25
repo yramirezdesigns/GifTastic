@@ -52,7 +52,7 @@ $(document).ready(function() {
       function displayButtons() {
         $("#myButtons").empty();
         for (var i = 0; i < topics.length; i++) {
-          var a = $('<button class="btn btn-primary">');
+          var a = $('<button class="btn btn-warning">');
           a.attr("id", "anime");
           a.attr("data-search", topics[i]);
           a.text(topics[i]);

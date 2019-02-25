@@ -1,10 +1,10 @@
 #header {
-	background-color: yellow;
+	background-color: #ffbb00;
 	color: #000000;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 15px;
-	font-family: "Carrois Gothic SC", sans-serif;
+	font-family: 'Indie Flower', cursive;
 }
 
 
@@ -17,12 +17,13 @@ label {
 	margin-left: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font-family: 'Indie Flower', cursive;
 }
 
 #cartoonsSearch {
 	margin: 0 auto;
 	text-align: center;
-	font-family: "Carrois Gothic SC", sans-serif;
+	font-family: 'Indie Flower', cursive;
 }
 
 #gifArea {
