@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Animals</title>
+  <style type="text/css">
+    button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Animal Search</h1>
+
+    <!-- animals will get dumped here -->
+    <div id="animals-view"></div>
+
+    <form id="animal-form">
+      <label for="animal-input">Add an animal!</label>
+      <input type="text" id="animal-input"><br>
+
+      <!-- Button triggers new movie to be added -->
+      <input id="add-animal" type="submit" value="Add an animal!">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+//javascript, jQuery
+    var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=UqSVSuZR3nWGR9Mv3J8nrIOBkYAoJ5cA");
+    xhr.done(function(data) { console.log("success got data", data); });
+
+
+      var topics = ["Monkeys", "Fish", "Cats", "Dogs"];
+
+      function renderButtons() {
+        $("#animals-view").empty();
+        for (var i = 0; i < topics.length; i++) {        
+          var a = $("<button>");        
+          a.addClass("animal");        
+          a.attr("data-name", topics[i]);        
+          a.text(topics[i]);        
+          $("#animals-view").append(a);
+        }
+      }
+
+//Not able to get the giphy gif add to the dom
+      $("#add-animal").on("click", function(event) {
+        event.preventDefault();
+        var animal = $("#animal-input").val().trim();
+        topics.push(animal);
+        renderButtons();
+        function renderGiphy(){
+            //     $.ajax({
+            //   url: queryURL,
+            //   method: "GET"
+            // }).then(function(response) {
+            //   console.log(response);
+            // }); 
+            var g = GET /v1/gifs/{gif_id}
+            $(renderButtons).prepend(g*10);
+        }
+      renderGiphy();
+
+      });
+
+      renderButtons();
+
+
+      
+    </script>
+  </div>
+</body>
+
+</html>
